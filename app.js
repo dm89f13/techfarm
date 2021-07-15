@@ -9,6 +9,15 @@ const A_KEY = '17182924a2d647e70bdd30a6b72cc3ac';
 let lat = '51.50722';
 let lng = '-0.1275';
 
+
+const sDropdown = document.getElementById('select-state'); //state dropdown
+const selectCom = document.getElementById('select-com');    //commodity drop down
+
+
+initComLoad(); // initialize commodity container
+
+
+
 const getLocation = document.getElementById(`get-my-location`); //button
 
 updateWeather(lat, lng);
@@ -48,6 +57,7 @@ async function updateWeather( latitude, longitude ){
     // let res = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=12.953190399999999&lon=77.5749632&appid=17182924a2d647e70bdd30a6b72cc3ac&units=metric`)
     
     if(res.status !== 200){
+        alert(`API DOWN msg from update weather function Error Code ${ res.status }`)
         throw new Error(' API DOWN msg from update weather function');
     }
 
@@ -165,3 +175,138 @@ function deleteChildNodes(parent){
     }
 
 }
+
+
+
+
+// this is commodity price updater
+
+
+sDropdown.addEventListener( 'change', async (evt)=>{
+
+    const sState = evt.target.value;
+    await loadCommo(sState);
+    await loadComPrice();
+})
+
+selectCom.addEventListener( 'change', async(evt)=>{
+
+    selectCom.value =evt.target.value;
+    await loadComPrice();
+
+} )
+
+
+async function initComLoad(){
+
+    await updateStates();
+    await loadCommo(sDropdown.value);
+    await loadComPrice();
+
+}
+
+
+async function updateStates(){
+
+
+    deleteChildNodes(sDropdown);
+
+    const comData = await getComData();
+
+    const states = new Set();
+
+    for( let sData of comData ){
+        states.add(sData.state);
+    }
+
+    for( let state of states ){
+        
+        let option = document.createElement('option');
+        option.innerText = state;
+        option.value = state;
+        sDropdown.appendChild(option);
+    }
+    
+
+
+
+}
+
+async function loadComPrice(){ //actual price table
+
+    const priceTable = document.getElementById("com-price-body");
+    deleteChildNodes(priceTable);
+
+    const comData = await getComData();
+
+    let state = sDropdown.value;
+    let commo = selectCom.value;
+    console.log(state);
+
+    let comCnt = 1;
+    for(let aState of comData ){
+
+        if( aState.state === state && aState.commodity === commo ){
+
+            let tr = document.createElement('tr');
+            tr.innerHTML = `
+            <th scope="col">${comCnt}</th>
+            <td> ${aState.market}</td>
+            <td> ${aState.district} </td>
+            <td> ${aState.commodity} </td>
+            <td> ${aState.variety} </td>
+            <td> ${aState.min_price} </td>
+            <td> ${aState.max_price} </td>
+            <td> ${aState.modal_price} </td>
+            `
+            comCnt += 1;
+            priceTable.appendChild(tr);
+
+        }
+
+
+    }
+
+
+
+}
+
+async function loadCommo(state){
+
+    const comData = await getComData();
+
+    deleteChildNodes(selectCom);
+
+    for( let aState of comData ){
+
+        if( aState.state === state ){
+
+            let option = document.createElement( 'option' );
+            option.value = aState.commodity;
+            option.innerText = aState.commodity;
+            selectCom.appendChild(option);
+
+        }
+    
+    }
+
+
+}
+
+
+async function getComData(){
+
+    let data = JSON.parse(comoData);
+
+    return data;
+
+}
+
+function deleteChildNodes(pNode){
+
+    while(pNode.firstChild){
+        pNode.removeChild(pNode.lastChild);
+    }
+
+}
+

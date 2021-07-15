@@ -151,6 +151,90 @@
 
     </div>
 
+
+    <div id="com-price-list" class="container overflow-x-scroll shadow">
+
+        <div class="row mb-2">
+            <h2 class="h2 card-title">Commodity Prices</h2>
+        </div>
+        
+        <div class="row mb-2 border border-2 py-2">
+
+            <div class="col-6">
+                <label for="select-state"> Select State :  </label>
+                    
+                <select id="select-state" name="state" class="form-select form-select-sm " aria-label=".form-select-lg example"  >
+                    <option selected value="null">Select State</option>
+                    <option  value="null">Select State</option>
+                    <option  value="null">Select State</option>
+                    <option  value="null">Select State</option>
+            
+                </select>
+            </div>
+
+            <div class="col-6">
+                <label for="select-state"> Select Commodity :  </label>
+                    
+                <select  id="select-com" name="commodity" class="form-select form-select-sm " aria-label=".form-select-lg example"  >
+                    <option  value="null">Select comm</option>
+                    <option  value="null">Select comm</option>
+                    <option  value="null">Select comm</option>
+                    <option  value="null">Select comm</option>
+
+            
+                </select>
+
+            </div>
+            
+            <div class="row my-2 ms-2">
+                <div class="alert alert-success" role="alert">
+                     <a href="#" class="alert-link">Commodity prices analysis</a>
+                  </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-2 border border-2">
+
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Market</th>
+                    <th scope="col">District</th>
+                    <th scope="col">commodity</th>
+                    <th scope="col">variety</th>
+                    <th scope="col">  &#8377; Min price </th>
+                    <th scope="col"> &#8377; Max price</th>
+                    <th scope="col"> &#8377; Modal price</th>
+                  </tr>
+                </thead>
+                <tbody id="com-price-body" >
+                  <tr>
+                    <th scope="col">#</th>
+                    <td> Market </td>
+                    <td> District </td>
+                    <td> commodity </td>
+                    <td> variety </td>
+                    <td> Min price </td>
+                    <td> Max price </td>
+                    <td> Modal price </td>
+
+                  </tr>
+        
+                </tbody>
+              </table>                                                                      
+        
+
+        </div>
+
+
+
+    </div> 
+
+
+
+
     
     <footer class="bg-dark" >
         <div class="container-fluid text-center">
@@ -163,6 +247,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <!-- <script src="app.js"></script> -->
+    <script src="comoData.json"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
