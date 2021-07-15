@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <title>Technofarm</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow">
+        <div class="container   ">
+          <a class="navbar-brand" href="#">
+            <i class="h2 fas fa-seedling" style="color: #3A5F0B;" ></i>  
+            Technofarm
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ecommerce</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                  <li><a class="dropdown-item " href="#">Sell Your Crop</a></li>
+                  <li><a class="dropdown-item " href="#">Financial Depreived</a></li>
+                  <li><a class="dropdown-item " href="#">Crop recovery</a></li>
+                  <li><a class="dropdown-item " href="#">Educational Content</a></li>
+                  <li><a class="dropdown-item " href="#">ETC</a></li>
+                  
+                </ul>
+              </li>              
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blogs</a>
+              </li>
+
+            </ul>
+
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <button class="btn-outline-success btn my-2 my-lg-auto me-lg-2">Login</button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn-primary btn">Sign UP</button>
+                    
+                </li>
+            </ul>
+
+    
+          </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 shadow overflow-hidden  ">
+
+        <div class="row ">
+            <div class="py-3 col-lg-8 border ">
+
+                <div class="h2">Weather Forcasting</div>
+                <div id="slider-box">
+                    <div id="slider">
+
+                        <div class=" card w-card d-inline-block" style="background-color: #eae4e9;">
+                            <div class="card-body py-1">
+                                <div class="row mb-4">
+                                    <div class="col-6">
+                                        <img id="w-icon"class="img-fluid"  src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text h3">21&#176;  C</div>
+                                        <div class="card-text h5">11:44 AM</div>
+                                        <div class="card-text h5">Monday</div>
+                                    </div>
+                                </div>
+                                <div   class="row ">
+                                    <ul class="list-group px-1">
+                                        <li class="list-group-item"   style="background-color: #f0efeb;" ><span class="h6">Description:  </span>light rain</li> 
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span class="h6">Min Temp:  </span>22&#176;  C</li>
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span class="h6">Max Temp:  </span>25&#176;  C</li>
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span class="h6">Wind Speed:  </span>9.26 m/s</li>
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span  class="h6">Precipitation:  </span> 23%</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+                         
+                        <div class=" card w-card d-inline-block" style="background-color: #eae4e9;">
+                            <div class="card-body py-1">
+                                <div class="row mb-4">
+                                    <div class="col-6">
+                                        <img id="w-icon"class="img-fluid"  src="http://openweathermap.org/img/wn/01d@4x.png" alt="">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text h3">21&#176;  C</div>
+                                        <div class="card-text h5">11:44 AM</div>
+                                        <div class="card-text h5">Monday</div>
+                                    </div>
+                                </div>
+                                <div   class="row ">
+                                    <ul class="list-group px-1">
+                                        <li class="list-group-item"   style="background-color: #f0efeb;" ><span class="h6">Description:  </span>light rain</li> 
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span class="h6">Min Temp:  </span>22&#176;  C</li>
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span class="h6">Max Temp:  </span>25&#176;  C</li>
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span class="h6">Wind Speed:  </span>9.26 m/s</li>
+                                        <li class="list-group-item "  style="background-color: #f0efeb;" ><span  class="h6">Precipitation:  </span> 23%</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+
+                </div>                
+                
+                <button id="get-my-location" class="m-3 btn btn-sm btn-primary">Get my Location</button>
+                <ul id="location-info"  class=" m-3 list-group">
+                    <li id = "time" class="list-group-item">Time : </li>
+                    <li id = "lat" class="list-group-item ">Lat : </li>
+                    <li id = "lng"  class="list-group-item">Long : </li>
+                    <li id = "city" class="list-group-item">City name : </li>
+                </ul>
+            
+            
+            </div>
+
+            <div class="py-3 col-lg-4 d-none d-lg-block border">
+                <h2 class="lead">Latest News</h2>
+                <div class="alert alert-secondary" role="alert">
+                    <span id="w-alert">A simple primary alert—check it out!</small>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    <footer class="bg-dark" >
+        <div class="container-fluid text-center">
+            <h4 class="text-light" >Technofarm</h4>
+            <p class="text-light" >&copy;2021</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>
