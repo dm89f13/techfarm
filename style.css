@@ -41,3 +41,10 @@ footer{
 #w-icon{
     width:100%;
 }
+
+
+#com-table-cntr{
+
+    overflow-x: scroll;
+
+}

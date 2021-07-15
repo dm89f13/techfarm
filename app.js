@@ -57,7 +57,7 @@ async function updateWeather( latitude, longitude ){
     // let res = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=12.953190399999999&lon=77.5749632&appid=17182924a2d647e70bdd30a6b72cc3ac&units=metric`)
     
     if(res.status !== 200){
-        alert(`API DOWN  Error Code ${ res.status } Try agin later `)
+        alert(`API DOWN  Error Code ${ res.status } Try agin later  `)
         throw new Error(' API DOWN msg from update weather function');
     }
 
